@@ -1,6 +1,7 @@
 /*global kakao*/
 import React, { Component } from 'react';
 import styled from "styled-components";
+import Menu from './Menu';
 
 
 
@@ -22,11 +23,11 @@ class Map extends Component{
         
         let options = {
           center: new kakao.maps.LatLng(38.506502, 127.053617),
-          level: 18 //비율 조정
+          level: 13 //비율 조정
 
   };
 
-  const map = new window.kakao.maps.Map(container, options);
+  const map = new window.kakao.maps.Map(container, options); // eslint-disable-line no-unused-vars
      
 });
 
@@ -36,16 +37,22 @@ class Map extends Component{
 
  render() {
   return (
+ 
   <div>
+    <Menu />
     <Maps id="Mymap"/>
   </div>) // 이부분이 지도를 띄우게 될 부분.
 }
 
 }
 
+
+
 const Maps = styled.div`
-width: 550px;
-height: 550px;
+min-width: 1480px;
+width: 100%;
+height: 950px;
 `;
+
 
 export default Map;
