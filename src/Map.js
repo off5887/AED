@@ -2,6 +2,7 @@
 import React, { Component } from 'react';
 import styled from "styled-components";
 import Menu from './Menu';
+import "./Map.css";
 
 
 
@@ -38,7 +39,7 @@ class Map extends Component{
  render() {
   return (
  
-  <div>
+  <div className = "Con">
     <Menu />
     <Maps id="Mymap"/>
   </div>) // 이부분이 지도를 띄우게 될 부분.
@@ -49,7 +50,7 @@ class Map extends Component{
 
 
 const Maps = styled.div`
-min-width: 1480px;
+min-width: 1080px;
 width: 100%;
 height: 950px;
 `;

@@ -11,12 +11,16 @@ import DirectionsIcon from '@material-ui/icons/Directions';
 
 
 
+
 const useStyles = makeStyles((theme) => ({
+
     root: {
       padding: '2px 4px',
       display: 'flex',
       alignItems: 'center',
       width: 400,
+      height :950,
+
     },
     input: {
       marginLeft: theme.spacing(1),
@@ -25,6 +29,7 @@ const useStyles = makeStyles((theme) => ({
     iconButton: {
       padding: 10,
     },
+
     divider: {
       height: 28,
       margin: 4,
@@ -40,13 +45,16 @@ const useStyles = makeStyles((theme) => ({
     const classes = useStyles();
   
     return (
-      <Paper component="form" className={classes.root}>
+
+<div className={classes.root}>
 
 
+       
+
+<Paper component="form" className={classes.root}>
         <IconButton className={classes.iconButton} aria-label="menu">
           <MenuIcon /> 
         </IconButton>
-
         <InputBase
           className={classes.input}
           placeholder="Search Google Maps"
@@ -61,10 +69,16 @@ const useStyles = makeStyles((theme) => ({
 
         <IconButton color="primary" className={classes.iconButton} aria-label="directions">
           <DirectionsIcon />
-
-
         </IconButton>
+
       </Paper>
+      <Paper elevation={3} className={classes.paper}>Content 2</Paper>
+
+
+</div>
+
+
+
 
 
     );
