@@ -45,12 +45,12 @@ class Map extends Component{
  
 
   <div className = "Container">
- 
-    <Header />
+ {isPc && 
+    <Header /> }
       <div className = "Container">
         <Maps id="Mymap"/>
       </div>
-  
+ 
   </div>
 
 
@@ -60,14 +60,12 @@ class Map extends Component{
 
 }
 
-
-const MAP_MEDIA_QUERIEX = {
-
-
-  pc : "(min-width : 1024px) and (max-width: 1279px)",
-  mobile : "(max-width: 767px)"
-  
-};
+const isPc = useMediaQuery({
+  query : "(min-width:1024px)"
+});
+const isMobile = useMediaQuery({
+  query : "(max-width:767px)"
+});
 
 const Maps = styled.div`
 
