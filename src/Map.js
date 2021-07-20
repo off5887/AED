@@ -1,8 +1,9 @@
 /*global kakao*/
 import React, { Component } from 'react';
 import styled from "styled-components";
-import Menu from './Menu';
+import Header from './Header';
 import "./Map.css";
+
 
 
 
@@ -36,21 +37,40 @@ class Map extends Component{
 
 }
 
+
+//<Media queries = {MAP_MEDIA_QUERIEX}>
+// /  </Media>
  render() {
   return (
  
-  <div className = "Con">
-    <Menu />
-    <Maps id="Mymap"/>
-  </div>) // 이부분이 지도를 띄우게 될 부분.
+
+  <div className = "Container">
+ 
+    <Header />
+      <div className = "Container">
+        <Maps id="Mymap"/>
+      </div>
+  
+  </div>
+
+
+
+  ) // 이부분이 지도를 띄우게 될 부분.
 }
 
 }
 
 
+const MAP_MEDIA_QUERIEX = {
+
+
+  pc : "(min-width : 1024px) and (max-width: 1279px)",
+  mobile : "(max-width: 767px)"
+  
+};
 
 const Maps = styled.div`
-min-width: 1080px;
+
 width: 100%;
 height: 950px;
 `;
