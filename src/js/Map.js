@@ -1,8 +1,9 @@
 /*global kakao*/
-import React, { Component } from 'react';
+import React, { useRef, useEffect, Component } from 'react';
 import styled from "styled-components";
-import Header from './Header';
-import "./Map.css";
+import Gnb from './Gnb';
+import "../css/common.css";
+import { SingleBedTwoTone } from '@material-ui/icons';
 
 
 
@@ -30,11 +31,15 @@ class Map extends Component{
   };
 
   const map = new window.kakao.maps.Map(container, options); // eslint-disable-line no-unused-vars
-     
+ 
+
+  // 마커가 표시될 위치
+  const markerPosition  = new kakao.maps.LatLng(37.450701, 126.870667);
+  const marker = new kakao.maps.Marker({ position: markerPosition });
+  marker.setMap(map);
+
 });
-
 };
-
 }
 
 
@@ -44,9 +49,9 @@ class Map extends Component{
   return (
  
 
-  <div className = "Container">
- {isPc && 
-    <Header /> }
+  <div className="wrap">
+  
+      <Gnb />
       <div className = "Container">
         <Maps id="Mymap"/>
       </div>
@@ -60,12 +65,7 @@ class Map extends Component{
 
 }
 
-const isPc = useMediaQuery({
-  query : "(min-width:1024px)"
-});
-const isMobile = useMediaQuery({
-  query : "(max-width:767px)"
-});
+
 
 const Maps = styled.div`
 

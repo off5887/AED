@@ -1,0 +1,229 @@
+
+
+/* 
+
+
+@font-face {
+  font-family: "NanumSquare";
+  src: local("NanumSquare-acB"),
+  url(./font/NanumSquare-acB.woff) format("woff"),
+} */
+
+
+
+
+/*********************** 
+        
+          pc
+
+***********************/
+
+
+/* map */
+
+.Container {
+    display: flex;
+    width: calc(100% - 300px);
+    height: 100%;
+    margin-left: 300px;
+}
+
+
+/* Gnb */
+
+.Con {
+
+    display: flex;
+
+}
+
+.gnb {
+    width: 320px;
+    height: 100vh;
+    background: #fff;
+    position: absolute;
+    z-index: 9999;
+    align-content: center;
+    align-items: center;
+    padding: 4px 10px 2px 4px;
+  }
+
+
+.gnb .input {
+    margin-left: 2px;
+    flex: 1;
+}
+
+
+.gnb .iconButton {
+    margin: 1px;
+}
+
+
+.gnb .divider {
+    width: 2px;
+    height: 28;
+    margin: 4;
+  }
+
+
+
+/* Gnb - Menu - Button */
+
+.gnb .menu {
+
+
+    display: flex;
+    width: 300px;
+    height: 50px;
+    padding: 1px;
+    padding-top: 10px;
+    justify-content: center; /*자식요소를 가운데 정렬 하겠다*/
+    margin-left: 6px;
+  }
+
+.gnb .menu .button {
+
+    margin: 2px; 
+    width: 100%;
+    height: 100%;
+    background: #0e202c;
+    justify-content: center;
+    border-radius: 10px;
+
+}
+
+.gnb .menu .button .icon{
+    text-align:center;
+    position: relative;
+    margin: 10px;
+    color: #fff;
+    font-size: .5em;
+}
+
+
+
+/* Gnb - Menu -  Weather */
+
+
+.gnb .menu .Weather{
+
+  padding-top: 20px;
+  padding-bottom: 20px;
+    margin: 2px; 
+    width: 100%;
+    height: 100%;
+
+    justify-content: center;
+}
+
+.gnb .menu .Weather .location{
+
+
+  margin: 10px;
+  padding: 5px; 
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  border-radius: 10px;
+  color: #0e202c;
+  font-weight: bold;
+  font-size: medium;
+
+
+}
+.gnb .menu .Weather .Weather_Info {
+
+  margin: 2px 4px 2px 10px;
+  padding: 5px; 
+  font-size: small;
+
+
+}
+
+.gnb .menu .Weather .Weather_Info .txt_air{
+  margin-left: 2px;
+
+
+}
+
+.gnb .menu .Weather .Weather_Info .txt_temper{
+  margin-left: 2px;
+  color: #0c846c;
+  font-weight: bold;
+  font-size: medium;
+
+  }
+
+  .gnb .menu .Weather .Weather_Info .txt_change{
+
+    margin-left: 1px;
+    color: gray;
+
+    font-size: small;
+    padding-left: 2px;
+    
+    }
+
+    
+  .gnb .menu .Weather .Weather_Info .txt_bar{
+
+    display: inline-block;
+    width: 1px;
+    height: 10px;
+    margin: 0 8px 0 7px;
+    background-color: #e2e2e2;
+
+    }
+
+    .gnb .menu .Weather .Weather_Info .txt_dust{
+
+
+      margin: 0 8px 0 7px;
+      color: gray;
+
+      }
+
+      
+    .gnb .menu .Weather .Weather_Info .txt_dust .dust_state{
+
+
+      margin: 0 8px 0 7px;
+      color: #0c846c;
+
+      }
+
+      .gnb .menu .Weather .Weather_Info .menu_bar{
+
+        display: inline-block;
+        width: 100%;
+        height: 1px;
+        background-color: #e2e2e2;
+    
+        }
+  
+
+
+/* gnb */
+
+/*********************** 
+        
+        mobile
+
+***********************/
+
+  @media only screen and (max-width: 420px) {
+    
+    /* Gnb */
+    .gnb{width: 100% !important; height: 50px; background: #5700f8;} 
+
+    /* map */
+    .Container {
+        display: flex;
+        width: 100%;
+        height: calc(100% - 50px);
+        padding-top: 50px;
+        margin-left: 0;
+    }
+
+  }
